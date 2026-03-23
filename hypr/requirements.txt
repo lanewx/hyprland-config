@@ -1,0 +1,8 @@
+foot
+grim
+wofi
+slurp
+fish
+waybar
+wlogout
+swww

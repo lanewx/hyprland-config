@@ -1,0 +1,7 @@
+grim
+slurp
+wl-clipboard
+pipewire
+pipewire-pulse
+wireplumber
+mako
