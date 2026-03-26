@@ -1,0 +1,137 @@
+{
+	"cpu": {
+		"interval": 3,
+		"format": "󰍛 CPU: {usage}%",
+		"tooltip-format": "CPU: {usage}%\nLoad: {load}",
+		"on-click": "kitty -e btop",
+	},
+
+	// "clock": {
+	// 	"format": "{:%d %b %H:%M %p}",
+	// 	"tooltip": false,
+	// },
+
+	"clock": {
+		"format": "{:%d %b %H:%M %p}",
+		"format-alt": "{:%d·%m·%y %H:%M %p}",
+		"tooltip-format": "<tt>{calendar}</tt>",
+		"calendar": {
+			"mode": "month",
+			"mode-mon-col": 3,
+			"on-scroll": 1,
+			"on-click-right": "mode",
+			"format": {
+				"months": "<span color='#ffead3'><b>{}</b></span>",
+				"weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+				"today": "<span color='#ff6699'><b>{}</b></span>",
+			},
+		},
+		"actions": {
+			"on-click-right": "mode",
+			"on-click-forward": "tz_up",
+			"on-click-backward": "tz_down",
+			"on-scroll-up": "shift_up",
+			"on-scroll-down": "shift_down",
+		},
+	},
+
+	"network": {
+		"interval": 2,
+		"format-wifi": "  {essid}",
+		"format-ethernet": "󰈀  Wired",
+		"format-linked": "<span foreground='#a6e3a1'>󰈀  Connected</span>",
+		"format-disconnected": "  Offline",
+		"format-alt": "↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+		"tooltip-format": "IP: {ipaddr}\n {bandwidthDownBytes}\n {bandwidthUpBytes}\nInterface: {ifname}",
+		"tooltip-format-disconnected": "No connection",
+		"max-length": 30,
+		"on-click": "nm-connection-editor",
+		"on-click-right": "kitty -e nmtui",
+	},
+
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-muted": "  {volume}%",
+		"scroll-step": 5,
+		"format-icons": {
+			"default": ["", "", ""],
+		},
+		"tooltip-format": "{volume}% | mic: {format_source}",
+		"tooltip-format-muted": "Muted ({volume}%)",
+		"on-click": "kitty -e wiremix",
+		"on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+	},
+
+	// "mpris": {
+	// 	"format": "{status_icon} {artist} - {title}",
+	// 	"format-paused": "{status_icon} {artist} - {title}",
+	// 	"format-stopped": "{status_icon}",
+	// 	"player-icons": {
+	// 		"default": "🎵",
+	// 		"spotify": "󰓇",
+	// 		"firefox": "󰈹",
+	// 	},
+	// 	"status-icons": {
+	// 		"playing": "▶",
+	// 		"paused": "⏸",
+	// 		"stopped": "⏹",
+	// 	},
+	// 	"tooltip-format": "{title}\n{artist} - {album}",
+	// 	"on-click": "playerctl play-pause",
+	// 	"on-scroll-up": "playerctl next",
+	// 	"on-scroll-down": "playerctl previous",
+	// 	"max-length": 28,
+	// },
+
+	"memory": {
+		"states": {
+			"c": 90, // critical
+			"h": 60, // high
+			"m": 30, // medium
+		},
+		"interval": 10,
+		"format": "󰾆 RAM: {percentage}%",
+		"rotate": 0,
+		"format-m": "󰾅 {percentage}%",
+		"format-h": "󰓅 {percentage}%",
+		"format-c": " {percentage}%",
+		"format-alt": "󰾆 {used}GB",
+		"max-length": 10,
+		"tooltip": true,
+		"tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB",
+	},
+
+	"custom/notification": {
+		"tooltip": true,
+		"format": "{icon} {0}",
+		"format-icons": {
+			"notification": "󱅫",
+			"none": "󰂜",
+			"dnd-notification": "󰂠",
+			"dnd-none": "󰪓",
+			"inhibited-notification": "󰂛",
+			"inhibited-none": "󰪑",
+			"dnd-inhibited-notification": "󰂛",
+			"dnd-inhibited-none": "󰪑",
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true,
+	},
+
+	"hyprland/language": {
+		"format": "  {}",
+		"format-en": "EN",
+		"format-ru": "RU",
+		"on-click": "hyprctl switchxkblayout all next",
+	},
+
+	// "custom/power": {
+	// 	"format": "⏻",
+	// 	"tooltip": false,
+	// 	"on-click": "wlogout -b 2",
+	// },
+}

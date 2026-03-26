@@ -5,4 +5,7 @@ slurp
 fish
 waybar
 wlogout
-swww
+awww
+qt6-svg
+qt6-declarative
+qt5-quickcontrols2

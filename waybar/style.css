@@ -1,0 +1,135 @@
+/* Global: */
+* {
+	font-family: "JetBrainsMono Nerd Font";
+	font-size: 15px;
+	font-weight: 600;
+	border: none;
+	min-height: 0;
+	border-radius: 18px;
+}
+
+/* Colors (Catppuccin Mocha): */
+@define-color mantle #181825;
+@define-color text #cdd6f4;
+@define-color lavander #b4befe;
+@define-color border #89b4fa;
+@define-color surface2 #585b70;
+@define-color warn #fab387;
+@define-color critical #f38ba8;
+
+/* Waybar Container: */
+window#waybar {
+	background: transparent;
+	margin: 6px 10px;
+	transition: opacity 0.3s ease;
+}
+
+window#waybar.hidden {
+	opacity: 0.25;
+}
+
+/* Layout: */
+.modules-left,
+.modules-center,
+.modules-right {
+	margin: 2px;
+}
+
+/* Tooltip: */
+tooltip {
+	background: @mantle;
+	border: 2px solid @border;
+}
+
+tooltip label {
+	color: @text;
+	padding: 6px 8px;
+}
+
+/* Base Modules: */
+#window,
+#custom-updates,
+#custom-notification,
+#network,
+#cpu,
+#memory,
+#pulseaudio,
+#language {
+	background: @mantle;
+	color: @text;
+	margin: 3px;
+	padding: 3px 16px;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
+}
+
+#custom-notification {
+	font-size: 17px;
+}
+
+#clock {
+	background: @lavander;
+	color: @mantle;
+	margin: 3px;
+	padding: 3px 16px;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
+}
+
+/* Hover States: */
+#window:hover,
+#custom-updates:hover,
+#custom-notification:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover,
+#pulseaudio:hover,
+#language:hover {
+	background: @text;
+	color: @mantle;
+}
+
+/* Workspaces: */
+#workspaces {
+	background: @mantle;
+	padding: 3px 4px;
+	margin: 2px;
+}
+
+#workspaces button {
+	color: @surface2;
+	padding: 3px 28px;
+	margin: 2px;
+	transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+	background: @lavander;
+	color: @mantle;
+	min-width: 38px;
+}
+
+#workspaces button:hover {
+	background: @text;
+	color: @mantle;
+}
+
+/* States: */
+#memory.warning {
+	color: @warn;
+}
+
+#memory.critical {
+	color: @critical;
+	animation: blink 0.8s infinite alternate;
+}
+
+/* Animations: */
+@keyframes blink {
+	to {
+		background: @text;
+		color: @text;
+	}
+}

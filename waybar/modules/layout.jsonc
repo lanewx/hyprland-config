@@ -1,0 +1,11 @@
+{
+	"modules-left": ["cpu", "memory", "hyprland/window"],
+	"modules-center": ["hyprland/workspaces"],
+	"modules-right": [
+		"network",
+		"pulseaudio",
+		"custom/notification",
+		"hyprland/language",
+		"clock",
+	],
+}
