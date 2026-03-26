@@ -38,8 +38,8 @@ This repository contains my custom **Hyprland** configuration — a modern, dyna
 - **Modular config structure** (easy to tweak and extend)
 
 ## Showcase
-![Screenshot 1](Screenshots/Screenshot-1.png)
-![Screenshot 2](Screenshots/Screenshot-2.png)
+![Screenshot 1](Showcases/Screenshot-1.png)
+![Screenshot 2](Showcases/Screenshot-2.png)
 
 ## Structure
 
