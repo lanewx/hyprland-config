@@ -43,34 +43,3 @@ This repository contains my custom **Hyprland** configuration — a modern, dyna
 
 ## Structure
 
-```plaintext
-├── gtk-3.0/                 # GTK3 theming and UI settings
-│   └── settings.ini         # Theme, icons, fonts configuration
-│
-├── gtk-4.0/                 # GTK4 theming (separate from GTK3)
-│   └── settings.ini         # Same purpose as GTK3 but for newer apps
-│
-├── hypr/                    # Hyprland core configuration
-│   ├── conf/                # Modular config split for maintainability
-│   │   ├── env.conf         # Environment variables (e.g. Wayland, apps)
-│   │   ├── general.conf     # General settings (gaps, borders, layouts)
-│   │   ├── keybinds.conf    # Keybindings and shortcuts
-│   │   ├── startup.conf     # Autostart applications and services
-│   │   └── windowrules.conf # Window rules (floating, workspace assign, etc.)
-│   │
-│   ├── hyprland.conf        # Main entry config (imports everything)
-│   ├── hypridle.conf        # Idle behavior (screen timeout, suspend)
-│   └── hyprlock.conf        # Lock screen configuration
-│
-├── mako/                    # Notification daemon (Wayland-native)
-│   └── config               # Notification styling and behavior
-│
-├── wlogout/                 # Logout / power menu UI
-│   ├── icons/               # Icons for power options
-│   ├── layout               # Button layout and structure
-│   └── style.css            # Styling (colors, spacing, fonts)
-│
-└── wofi/                    # Application launcher (dmenu-like)
-    ├── config               # Launcher behavior and options
-    └── style.css            # Theme and visual appearance
-```
