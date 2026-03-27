@@ -29,6 +29,7 @@ This repository contains my custom **Hyprland** configuration — a modern, dyna
 
 ## Showcase
 ![Screenshot 1](Showcases/Screenshot-1.png)
+![Screenshot 3](Showcases/Screenshot-3.png)
 ![Screenshot 2](Showcases/Screenshot-2.png)
 
 ## Structure
