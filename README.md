@@ -79,8 +79,8 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 ## Showcase
 ![Screenshot 1](Showcases/Screenshot-1.png)
-![Screenshot 3](Showcases/Screenshot-3.png)
-![Screenshot 2](Showcases/Screenshot-2.png)
+![Screenshot 3](Showcases/Screenshot-2.png)
+![Screenshot 2](Showcases/Screenshot-3.png)
 
 <div align="center">
   
