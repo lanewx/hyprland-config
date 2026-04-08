@@ -1,3 +1,6 @@
+[Screenshot-1](Showcases/Screenshot-1.png)
+[Screenshot-2](Showcases/Screenshot-2.png)
+
 <div align="center">
 
 # Hyprland Configuration
