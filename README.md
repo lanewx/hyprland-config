@@ -1,7 +1,6 @@
-[Screenshot-1](Showcases/Screenshot-1.png)
-[Screenshot-2](Showcases/Screenshot-2.png)
-
 <div align="center">
+<img src="./Showcases/Screenshot-1.png"/> <br>
+<img src="./Showcases/Screenshot-2.png"/> <br>
 
 # Hyprland Configuration
 
@@ -60,12 +59,12 @@ Primary goals:
 | **Bar**                     | Waybar |
 | **Application Launcher**    | Wofi |
 | **Notification Daemon**     | swaync |
-| **Terminal Emulator**       | kitty |
+| **Terminal Emulator**       | kitty + foot |
 | **Shell**                   | fish shell |
 | **Text Editor**             | Vim |
 | **System resource monitor** | Btop |
 | **File Manager**            | nautilus + yazi |
-| **Fonts**                   | JetBrains Mono + JetBrainsMono Nerd Font |
+| **Fonts**                   | JetBrainsMono Nerd Font |
 | **Color Scheme**            | Gruvbox Dark |
 | **Cursor**                  | Bibata-Modern-Ice |
 | **Lockscreen**              | Hyprlock |
