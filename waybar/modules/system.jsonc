@@ -4,12 +4,12 @@
 		"format": "󰍛 CPU: {usage}%",
 		"tooltip-format": "CPU: {usage}%\nLoad: {load}",
 		"on-click": "kitty -e btop",
-	},
 
-	// "clock": {
-	// 	"format": "{:%d %b %H:%M %p}",
-	// 	"tooltip": false,
-	// },
+		"states": {
+			"warning": 50,
+			"critical": 80,
+		},
+	},
 
 	"clock": {
 		"format": "{:%d %b %H:%M %p}",
@@ -38,12 +38,12 @@
 	"network": {
 		"interval": 2,
 		"format-wifi": "  {essid}",
-		"format-ethernet": "󰈀  Wired",
-		"format-linked": "<span foreground='#a6e3a1'>󰈀  Connected</span>",
-		"format-disconnected": "  Offline",
+		"format-ethernet": "<span foreground='#b8bb26'>󰈀  Wired</span>",
+		"format-linked": "<span foreground='#b8bb26'>󰈀  Connected</span>",
+		"format-disconnected": "<span foreground='#cc241d'>  Disconnected</span>",
 		"format-alt": "↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
-		"tooltip-format": "IP: {ipaddr}\n {bandwidthDownBytes}\n {bandwidthUpBytes}\nInterface: {ifname}",
-		"tooltip-format-disconnected": "No connection",
+		"tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\n↓ {bandwidthDownBytes}\n↑ {bandwidthUpBytes}",
+		"tooltip-format-disconnected": "<span foreground='#cc241d'>No network connection</span>",
 		"max-length": 30,
 		"on-click": "nm-connection-editor",
 		"on-click-right": "kitty -e nmtui",
@@ -51,54 +51,37 @@
 
 	"pulseaudio": {
 		"format": "{volume}% {icon}",
-		"format-muted": "  {volume}%",
-		"scroll-step": 5,
+		"format-muted": " {volume}%",
 		"format-icons": {
 			"default": ["", "", ""],
 		},
+		"scroll-step": 5,
 		"tooltip-format": "{volume}% | mic: {format_source}",
 		"tooltip-format-muted": "Muted ({volume}%)",
-		"on-click": "kitty -e wiremix",
-		"on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click": "pavucontrol",
+		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+		"on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
 	},
 
-	// "mpris": {
-	// 	"format": "{status_icon} {artist} - {title}",
-	// 	"format-paused": "{status_icon} {artist} - {title}",
-	// 	"format-stopped": "{status_icon}",
-	// 	"player-icons": {
-	// 		"default": "🎵",
-	// 		"spotify": "󰓇",
-	// 		"firefox": "󰈹",
-	// 	},
-	// 	"status-icons": {
-	// 		"playing": "▶",
-	// 		"paused": "⏸",
-	// 		"stopped": "⏹",
-	// 	},
-	// 	"tooltip-format": "{title}\n{artist} - {album}",
-	// 	"on-click": "playerctl play-pause",
-	// 	"on-scroll-up": "playerctl next",
-	// 	"on-scroll-down": "playerctl previous",
-	// 	"max-length": 28,
-	// },
-
-	"memory": {
-		"states": {
-			"c": 90, // critical
-			"h": 60, // high
-			"m": 30, // medium
+	"mpris": {
+		"format": "{status_icon} {artist} - {title}",
+		"format-paused": "{status_icon} {artist} - {title}",
+		"format-stopped": "{status_icon}",
+		"player-icons": {
+			"default": "󰎆",
+			"spotify": "󰓇",
+			"firefox": "󰈹",
 		},
-		"interval": 10,
-		"format": "󰾆 RAM: {percentage}%",
-		"rotate": 0,
-		"format-m": "󰾅 {percentage}%",
-		"format-h": "󰓅 {percentage}%",
-		"format-c": " {percentage}%",
-		"format-alt": "󰾆 {used}GB",
-		"max-length": 10,
-		"tooltip": true,
-		"tooltip-format": "󰾆 {percentage}%\n {used:0.1f}GB/{total:0.1f}GB",
+		"status-icons": {
+			"playing": "▶",
+			"paused": "⏸",
+			"stopped": "⏹",
+		},
+		"tooltip-format": "{title}\n{artist} - {album}",
+		"on-click": "playerctl play-pause",
+		"on-scroll-up": "playerctl next",
+		"on-scroll-down": "playerctl previous",
+		"max-length": 28,
 	},
 
 	"custom/notification": {
@@ -128,10 +111,4 @@
 		"format-ru": "RU",
 		"on-click": "hyprctl switchxkblayout all next",
 	},
-
-	// "custom/power": {
-	// 	"format": "⏻",
-	// 	"tooltip": false,
-	// 	"on-click": "wlogout -b 2",
-	// },
 }

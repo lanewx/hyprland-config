@@ -1,6 +1,6 @@
 {
-	"modules-left": ["cpu", "memory", "hyprland/window"],
-	"modules-center": ["hyprland/workspaces"],
+	"modules-left": ["hyprland/workspaces", "cpu"],
+	"modules-center": ["hyprland/window"],
 	"modules-right": [
 		"network",
 		"pulseaudio",

@@ -1,11 +1,10 @@
 {
 	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
 	"logo": {
-		"type": "file",
-		"source": "~/.config/fastfetch/arch-banr.txt",
-		// "width": 2,
-		"color": { "1": "white" },
-		"padding": { "top": 1 },
+		"source": "arch_small", // search for logos: fastfetch --list-logos
+		"padding": { "top": 2 },
+		"color": { "1": "yellow", "2": "yellow" },
+		"width": 10,
 	},
 	"display": {
 		"separator": " * ",
@@ -15,43 +14,43 @@
 		{
 			"type": "os",
 			"key": " OS",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "kernel",
 			"key": " KERN",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "uptime",
 			"key": "󱑍 UPTM",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "packages",
 			"format": "{} (pacman)",
 			"key": " PKGS",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "shell",
 			"key": " SH",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "wm",
 			"key": " DE/WM",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "terminal",
 			"key": " TERM",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		{
 			"type": "disk",
 			"key": " DISK",
-			"keyColor": "white",
+			"keyColor": "yellow",
 		},
 		"break",
 		{

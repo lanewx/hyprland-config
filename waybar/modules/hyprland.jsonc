@@ -1,9 +1,11 @@
 {
 	"hyprland/workspaces": {
+		"all-outputs": true,
+		"active-only": false,
 		"on-click": "activate",
+		"format": "{icon}",
 		"on-scroll-up": "hyprctl dispatch workspace e+1",
 		"on-scroll-down": "hyprctl dispatch workspace e-1",
-		"format": "{icon}",
 		"format-icons": {
 			"1": "1",
 			"2": "2",
@@ -19,7 +21,7 @@
 	},
 
 	"hyprland/window": {
-		"format": "<span weight='bold' >{class}</span>",
+		"format": "<span weight='bold'>{class}</span>",
 		"max-length": 15,
 		"icon": false,
 		"icon-size": 16,
