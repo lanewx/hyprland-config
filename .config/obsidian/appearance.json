@@ -1,0 +1,11 @@
+{
+  "cssTheme": "Typewriter",
+  "interfaceFontFamily": "JetBrains Mono",
+  "textFontFamily": "JetBrains Mono",
+  "monospaceFontFamily": "JetBrainsMono NF",
+  "baseFontSize": 13,
+  "showRibbon": false,
+  "showViewHeader": true,
+  "accentColor": "#686f78",
+  "theme": "obsidian"
+}

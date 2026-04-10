@@ -1,0 +1,18 @@
+{
+	"reload_style_on_change": true,
+	"spacing": 0,
+	"layer": "top",
+	"output": ["*"],
+	"position": "bottom",
+	"mode": "dock",
+	"exclusive": true,
+	"passthrough": false,
+	"margin-bottom": 10,
+	"margin-left": 16,
+	"margin-right": 16,
+
+	"include": ["modules/hyprland.jsonc", "modules/components.jsonc"],
+	"modules-left": ["hyprland/workspaces", "cpu", "custom/notification"],
+	"modules-center": ["hyprland/window"],
+	"modules-right": ["network", "pulseaudio", "hyprland/language", "clock"],
+}

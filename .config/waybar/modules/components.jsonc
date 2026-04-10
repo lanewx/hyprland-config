@@ -1,0 +1,92 @@
+{
+	"cpu": {
+		"interval": 3,
+		"format": "󰍛 CPU: {usage}%",
+		"tooltip-format": "CPU: {usage}%\nLoad: {load}",
+		"on-click": "kitty -e btop",
+
+		"states": {
+			"warning": 50,
+			"critical": 80,
+		},
+	},
+
+	"hyprland/window": {
+		"format": "󰣆  {title}",
+		"max-length": 40,
+		"separate-outputs": false,
+		"rewrite": {
+			"(.*) — Mozilla Firefox": "󰈹  Firefox",
+			"^.*~$": "  Terminal",
+			// "^.*(vim|VIM).*$": "  Vim",
+			"^.*(vim|VIM).*$": "  Neovim",
+			// "^.*(nvim|Neovim).*$": "  Neovim",
+			"(.*) ": "  Home",
+			"^.*pdf( .*|$)": "  PDF",
+			"^.*(mpv|vlc).*$": "󰕼  Media",
+		},
+	},
+
+	"network": {
+		"interval": 2,
+		"format-wifi": "  {essid}",
+		"format-ethernet": "<span foreground='#93A86A'>󰈀  Wired</span>",
+		"format-linked": "<span foreground='#93A86A'>󰈀  Connected</span>",
+		"format-disconnected": "<span foreground='#C26152'>  Disconnected</span>",
+		"format-alt": "↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+		"tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\n↓ {bandwidthDownBytes}\n↑ {bandwidthUpBytes}",
+		"tooltip-format-disconnected": "<span foreground='#E82424'>No network connection</span>",
+		"max-length": 30,
+		"on-click": "nm-connection-editor",
+		"on-click-right": "kitty -e nmtui",
+	},
+
+	"custom/notification": {
+		"tooltip": true,
+		"format": "{icon} {0}",
+		"format-icons": {
+			"notification": "󱅫",
+			"none": "󰂜",
+			"dnd-notification": "󰂠",
+			"dnd-none": "󰪓",
+			"inhibited-notification": "󰂛",
+			"inhibited-none": "󰪑",
+			"dnd-inhibited-notification": "󰂛",
+			"dnd-inhibited-none": "󰪑",
+		},
+		"return-type": "json",
+		"exec-if": "which swaync-client",
+		"exec": "swaync-client -swb",
+		"on-click": "swaync-client -t -sw",
+		"on-click-right": "swaync-client -d -sw",
+		"escape": true,
+	},
+
+	"pulseaudio": {
+		"format": "{volume}% {icon}",
+		"format-muted": " {volume}%",
+		"format-icons": {
+			"default": ["", "", ""],
+		},
+		"scroll-step": 5,
+		"tooltip-format": "{volume}% | mic: {format_source}",
+		"tooltip-format-muted": "Muted ({volume}%)",
+		"on-click": "pavucontrol",
+		"on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle",
+		"on-click-middle": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	},
+
+	"hyprland/language": {
+		"format": "  {}",
+		"format-en": "English (US)",
+		"format-ru": "Russian (RU)",
+		"on-click": "hyprctl switchxkblayout all next",
+	},
+	"clock": {
+		"interval": 5,
+		"format": "{:%I:%M %p, %A, %b/%d/%y}",
+		"format-alt": "{:%Y-%m-%d %H:%M}",
+		"tooltip": true,
+		"tooltip-format": "{:%A, %d %B %Y | %H:%M:%S}",
+	},
+}

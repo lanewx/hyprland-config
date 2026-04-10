@@ -1,0 +1,112 @@
+/* Global */
+* {
+	font-family: "JetBrainsMono Nerd Font";
+	font-size: 16px;
+	font-weight: 600;
+	border: none;
+	min-height: 0;
+	border-radius: 18px;
+}
+
+/* Color palette */
+@define-color bg alpha(#1B1613, 0.85);
+@define-color bg-alt #14110F;
+@define-color bg-active #C69A5B;
+@define-color text #E8DCC0;
+@define-color cpu-warning #E0B97A;
+@define-color cpu-critical #C26152;
+@define-color surface2 #2C231E;
+
+/* Waybar container */
+window#waybar {
+	background: @bg;
+	margin: 6px 10px;
+	transition: opacity 0.3s ease;
+	border-radius: 20px;
+}
+
+window#waybar.hidden {
+	opacity: 0.25;
+}
+
+/* Layout */
+.modules-left,
+.modules-center,
+.modules-right {
+	margin: 2px;
+}
+
+/* Tooltip */
+tooltip {
+	border: 2px solid @text;
+	background: @bg-alt;
+}
+
+tooltip label {
+	padding: 6px 8px;
+}
+
+/* Base module style */
+#cpu,
+#window,
+#network,
+#custom-notification,
+#language,
+#clock {
+	color: @text;
+	background: @bg-alt;
+	margin: 3px;
+	padding: 3px 16px;
+	transition:
+		background 0.2s ease,
+		color 0.2s ease;
+}
+
+#custom-notification {
+	font-size: 17px;
+}
+
+/* Workspaces */
+#workspaces {
+	padding: 2px 4px;
+	margin: 2px;
+	background: @bg-alt;
+}
+
+#workspaces button {
+	color: @surface2;
+	padding: 3px 28px;
+	margin: 2px;
+	transition: all 0.2s ease;
+}
+
+#workspaces button.active {
+	background: @bg-active;
+	color: @bg-alt;
+}
+
+#workspaces button:hover {
+	background: @text;
+	color: @bg-alt;
+}
+
+/* States */
+/* Medium load */
+#cpu.warning {
+	background: @cpu-warning;
+	color: @bg-alt;
+}
+
+/* High load */
+#cpu.critical {
+	background: @cpu-critical;
+	color: @bg-alt;
+}
+
+/* Animations */
+@keyframes blink {
+	to {
+		background: @text;
+		color: @text;
+	}
+}

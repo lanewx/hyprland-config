@@ -1,0 +1,148 @@
+[
+	// CORE EDITING:
+	{
+		"key": "ctrl+j",
+		"command": "workbench.action.openApplicationSettingsJson",
+	},
+	{
+		"key": "ctrl+k",
+		"command": "workbench.action.openGlobalKeybindingsFile",
+	},
+	{
+		"key": "ctrl+p",
+		"command": "workbench.action.quickOpen",
+	},
+	{
+		"key": "ctrl+s",
+		"command": "workbench.action.files.save",
+	},
+	{
+		"key": "ctrl+shift+s",
+		"command": "workbench.action.files.saveAll",
+	},
+	{
+		"key": "ctrl+shift+d",
+		"command": "editor.action.duplicateSelection",
+	},
+	{
+		"key": "ctrl+/",
+		"command": "editor.action.commentLine",
+		"when": "editorTextFocus && !editorReadonly",
+	},
+	// NAVIGATION:
+	{
+		"key": "f1",
+		"command": "workbench.view.explorer",
+		"when": "viewContainer.workbench.view.explorer.enabled",
+	},
+	{
+		"key": "f2",
+		"command": "workbench.view.extensions",
+		"when": "viewContainer.workbench.view.extensions.enabled",
+	},
+	{
+		"key": "ctrl+b",
+		"command": "workbench.action.toggleSidebarVisibility",
+	},
+	{
+		"key": "ctrl+shift+f",
+		"command": "workbench.action.findInFiles",
+	},
+	// TERMINAL:
+	{
+		"key": "ctrl+t",
+		"command": "workbench.action.terminal.toggleTerminal",
+	},
+	{
+		"key": "ctrl+shift+t",
+		"command": "workbench.action.terminal.new",
+	},
+	{
+		"key": "ctrl+shift+k",
+		"command": "workbench.action.terminal.kill",
+	},
+	{
+		"key": "ctrl+shift+r",
+		"command": "workbench.action.terminal.rename",
+	},
+	{
+		"key": "ctrl+shift+k",
+		"command": "workbench.action.terminal.kill",
+	},
+	{
+		"key": "ctrl+shift+r",
+		"command": "workbench.action.terminal.rename",
+	},
+	{
+		"key": "ctrl+pageup",
+		"command": "workbench.action.terminal.focusPrevious",
+	},
+	{
+		"key": "ctrl+pagedown",
+		"command": "workbench.action.terminal.focusNext",
+	},
+	// CODE ACTIONS:
+	{
+		"key": "ctrl+.",
+		"command": "editor.action.quickFix",
+		"when": "editorHasCodeActionsProvider && textInputFocus && !editorReadonly",
+	},
+	{
+		"key": "pageup pageup",
+		"command": "editor.action.rename",
+		"when": "editorHasRenameProvider && editorTextFocus && !editorReadonly",
+	},
+	{
+		"key": "delete delete",
+		"command": "editor.action.deleteLines",
+		"when": "editorTextFocus",
+	},
+	// GIT
+	{
+		"key": "f3",
+		"command": "workbench.view.scm",
+	},
+	{
+		"key": "ctrl+enter",
+		"command": "git.commit",
+		"when": "scmInputIsFocus",
+	},
+	// FILE OPERATIONS:
+	{
+		"key": "ctrl+n",
+		"command": "explorer.newFile",
+		"when": "explorerViewletFocus",
+	},
+	{
+		"key": "r",
+		"command": "renameFile",
+		"when": "filesExplorerFocus && !inputFocus",
+	},
+	{
+		"command": "deleteFile",
+		"key": "d",
+		"when": "filesExplorerFocus && !inputFocus",
+	},
+	{
+		"key": "shift+n",
+		"command": "explorer.newFolder",
+		"when": "explorerViewletFocus",
+	},
+	{
+		"key": "ctrl+w",
+		"command": "workbench.action.closeActiveEditor",
+	},
+	{
+		"key": "ctrl+shift+w",
+		"command": "workbench.action.closeFolder",
+	},
+	// EDITOR LAYOUT:
+	{
+		"key": "ctrl+1",
+		"command": "workbench.action.focusFirstEditorGroup",
+	},
+	{
+		"key": "ctrl+2",
+		"command": "workbench.action.focusSecondEditorGroup",
+	},
+]

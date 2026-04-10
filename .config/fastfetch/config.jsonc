@@ -1,0 +1,61 @@
+{
+	"$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+	"logo": {
+		"source": "arch_small", // search for logos: fastfetch --list-logos
+		"padding": { "top": 2 },
+		"color": { "1": "white", "2": "white" },
+		"width": 10,
+	},
+	"display": {
+		"separator": " * ",
+	},
+	"modules": [
+		"break",
+		{
+			"type": "os",
+			"key": " OS",
+			"keyColor": "white",
+		},
+		{
+			"type": "kernel",
+			"key": " KERN",
+			"keyColor": "white",
+		},
+		{
+			"type": "uptime",
+			"key": "󱑍 UPTM",
+			"keyColor": "white",
+		},
+		{
+			"type": "packages",
+			"format": "{} (pacman)",
+			"key": " PKGS",
+			"keyColor": "white",
+		},
+		{
+			"type": "shell",
+			"key": " SH",
+			"keyColor": "white",
+		},
+		{
+			"type": "wm",
+			"key": " WM",
+			"keyColor": "white",
+		},
+		{
+			"type": "terminal",
+			"key": " TERM",
+			"keyColor": "white",
+		},
+		{
+			"type": "disk",
+			"key": " DISK",
+			"keyColor": "white",
+		},
+		"break",
+		{
+			"type": "custom",
+			"format": " \u001b[90m  \u001b[31m  \u001b[32m  \u001b[33m  \u001b[34m  \u001b[35m  \u001b[36m  \u001b[37m  \u001b[38m  \u001b[39m ",
+		},
+	],
+}
