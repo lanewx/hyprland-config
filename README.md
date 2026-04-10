@@ -1,55 +1,56 @@
 <div align="center">
+
+# Arch Dotfiles
+
 <img src="./Showcases/Screenshot-1.png"/> <br>
 <img src="./Showcases/Screenshot-2.png"/> <br>
 
-# Hyprland Configuration
+> Minimal, warm-toned Arch Linux setup built around Hyprland — optimized for long coding sessions, low visual fatigue, and consistent workflow behavior.
 
-<img src="./palette-gruvbox.png" width="600px">
-
-> My personal Arch Linux configuration is fully optimized for Hyprland, a modern and highly dynamic Wayland compositor. This configuration aims to create a fluid, responsive, and distraction-free desktop, optimized for coding, workflow management, and multimedia, while still being lightweight enough to run efficiently on modern hardware
-
-<img src="https://img.shields.io/badge/theme-gruvbox-282828?style=for-the-badge&color=d79921&labelColor=282828">
-<a href="https://github.com/lanewx/hyprland-config/">
-  <img src="https://img.shields.io/github/repo-size/lanewx/hyprland-config?color=689d6a&labelColor=282828&style=for-the-badge&logo=github&logoColor=689d6a">
+<a href="https://github.com/marliqn/arch-dotfiles/">
+  <img src="https://img.shields.io/github/repo-size/marliqn/arch-dotfiles?color=8C5A6B&labelColor=14110F&style=for-the-badge&logo=github&logoColor=8C5A6B">
+</a>
+<a href="https://github.com/marliqn/Monolisa">
+  <img src="https://img.shields.io/badge/theme-Monolisa-14110F?style=for-the-badge&color=C69A5B&labelColor=14110F">
 </a>
 <a href="https://archlinux.org">
-  <img src="https://img.shields.io/badge/archlinux-blue.svg?style=for-the-badge&labelColor=282828&logo=ArchLinux&logoColor=458588&color=458588">
+  <img src="https://img.shields.io/badge/archlinux-blue.svg?style=for-the-badge&labelColor=14110F&logo=ArchLinux&logoColor=6E7F87&color=6E7F87">
 </a>
 <a href="https://github.com/hyprwm/Hyprland">
-  <img src="https://img.shields.io/badge/Hyprland-v0.54.3-282828?style=for-the-badge&labelColor=282828&logo=hyprland&logoColor=b16286&color=b16286">
+  <img src="https://img.shields.io/badge/Hyprland-Wayland-14110F?style=for-the-badge&labelColor=14110F&logo=hyprland&logoColor=93A86A&color=93A86A">
 </a>
-
-
 </div>
 
 ## Philosophy
 
-This configuration is designed around a simple idea: 
+This configuration is built around a single principle:
 
-> Speed, clarity, and control over everything else.
+> Stability over spectacle.
 
- No unnecessary bloat, no overengineered visuals — just a responsive environment that stays out of your way while you work.
+The environment avoids unnecessary visual noise and favors consistency, predictable behavior, and long-term usability.
+Every component is selected to reduce friction and maintain focus during extended work sessions.
 
 ## Overview
 
-This repository contains a modular **Hyprland** configuration targeting a modern Wayland-native workflow.
+This repository provides a modular Hyprland setup tailored for a Wayland-native workflow with a strong emphasis on visual coherence.
 
 Primary goals:
 
-- **Low latency interaction** — minimal overhead, fast feedback  
-- **Deterministic behavior** — consistent keybindings and layout logic  
-- **Focused UI** — distraction-free workspace  
-- **Practical daily usability** — development, browsing, multimedia  
+- **Low latency interaction** — fast, predictable response across the system
+- **Deterministic workflow** — consistent keybindings and layout logic
+- **Reduced visual fatigue** — warm, low-contrast [Monolisa](https://github.com/marliqn/Monolisa) palette
+- **Focused environment** — minimal distractions, clean UI
+- **Practical daily use** — development, browsing, and media
 
 ## Features
 
-- **Dynamic workspace model** with smooth transitions  
-- **Hybrid tiling/floating workflow**  
-- **Consistent keybinding layer** optimized for speed  
-- **Wayland-native application stack**  
-- **Lightweight resource footprint**  
-- **Gruvbox-based visual consistency**  
-- **Integrated notification system**  
+- **Dynamic workspace model** with smooth transitions
+- **Hybrid tiling / floating** workflow
+- **Unified keybinding layer** optimized for speed and muscle memory
+- **Wayland-native** application stack
+- **Lightweight and efficient** resource usage
+- **[Monolisa](https://github.com/marliqn/Monolisa)-based** color consistency across all components
+
 
 ## System Components & Applications
 
@@ -65,13 +66,10 @@ Primary goals:
 | **System resource monitor** | Btop |
 | **File Manager**            | nautilus + yazi |
 | **Fonts**                   | JetBrainsMono Nerd Font |
-| **Color Scheme**            | Gruvbox Dark |
+| **Color Scheme**            | Monolisa (Dark) |
 | **Cursor**                  | Bibata-Modern-Ice |
 | **Lockscreen**              | Hyprlock |
 | **Image Viewer**            | imv |
 | **Media Player**            | vlc |
 | **Music Player**            | vlc |
 | **Screenshot Software**     | hyprshot |
-
-
-
