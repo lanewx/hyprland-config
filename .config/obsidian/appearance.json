@@ -1,11 +1,11 @@
 {
-  "cssTheme": "Typewriter",
+  "cssTheme": "Things",
   "interfaceFontFamily": "JetBrains Mono",
   "textFontFamily": "JetBrains Mono",
   "monospaceFontFamily": "JetBrainsMono NF",
-  "baseFontSize": 13,
+  "baseFontSize": 16,
   "showRibbon": false,
   "showViewHeader": true,
-  "accentColor": "#686f78",
-  "theme": "obsidian"
+  "accentColor": "#e9e1d6",
+  "theme": "moonstone"
 }

@@ -12,7 +12,12 @@
 	"margin-right": 16,
 
 	"include": ["modules/hyprland.jsonc", "modules/components.jsonc"],
-	"modules-left": ["hyprland/workspaces", "cpu", "custom/notification"],
-	"modules-center": ["hyprland/window"],
-	"modules-right": ["network", "pulseaudio", "hyprland/language", "clock"],
+	"modules-left": ["hyprland/workspaces", "cpu", "network"],
+	"modules-center": [],
+	"modules-right": [
+		"pulseaudio",
+		"hyprland/language",
+		"clock",
+		"custom/notification",
+	],
 }

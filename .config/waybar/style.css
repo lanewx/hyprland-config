@@ -2,31 +2,34 @@
 * {
 	font-family: "JetBrainsMono Nerd Font";
 	font-size: 16px;
-	font-weight: 600;
+	font-weight: 700;
 	border: none;
 	min-height: 0;
-	border-radius: 18px;
+	border-radius: 12px;
 }
 
-/* Color palette */
-@define-color bg alpha(#1B1613, 0.85);
-@define-color bg-alt #14110F;
-@define-color bg-active #C69A5B;
-@define-color text #E8DCC0;
-@define-color cpu-warning #E0B97A;
-@define-color cpu-critical #C26152;
-@define-color surface2 #2C231E;
+/* Global palette from wallpaper */
+@define-color bg #e9e1d6;
+@define-color bg-alt rgba(245, 238, 228, 0.90);
+@define-color text #1c2230;
+
+/* Accents */
+@define-color light #fff4e6;
+@define-color accent #f28c52;
+@define-color muted #7a86a8;
+@define-color yellow #ffd27a;
+@define-color red #e35d5b;
 
 /* Waybar container */
 window#waybar {
 	background: @bg;
 	margin: 6px 10px;
-	transition: opacity 0.3s ease;
-	border-radius: 20px;
+	padding: 2px;
+	border-radius: 14px;
 }
 
 window#waybar.hidden {
-	opacity: 0.25;
+	opacity: 0.2;
 }
 
 /* Layout */
@@ -38,75 +41,94 @@ window#waybar.hidden {
 
 /* Tooltip */
 tooltip {
-	border: 2px solid @text;
+	border-radius: 10px;
+	border: 1px solid @bg;
 	background: @bg-alt;
 }
 
 tooltip label {
-	padding: 6px 8px;
+	padding: 6px 10px;
+	color: @text;
 }
 
-/* Base module style */
+/* Base modules */
 #cpu,
-#window,
 #network,
 #custom-notification,
+#pulseaudio,
 #language,
 #clock {
 	color: @text;
 	background: @bg-alt;
 	margin: 3px;
-	padding: 3px 16px;
+	padding: 4px 14px;
 	transition:
-		background 0.2s ease,
-		color 0.2s ease;
+		background 0.15s ease,
+		color 0.15s ease;
 }
 
+/* Notification */
 #custom-notification {
 	font-size: 17px;
+	color: @accent;
 }
 
 /* Workspaces */
 #workspaces {
 	padding: 2px 4px;
 	margin: 2px;
-	background: @bg-alt;
+	background: transparent;
 }
 
 #workspaces button {
-	color: @surface2;
-	padding: 3px 28px;
+	color: @muted;
+	padding: 4px 18px;
 	margin: 2px;
-	transition: all 0.2s ease;
+	border-radius: 10px;
+	transition: all 0.15s ease;
 }
 
 #workspaces button.active {
-	background: @bg-active;
+	background: @accent;
 	color: @bg-alt;
 }
 
 #workspaces button:hover {
-	background: @text;
-	color: @bg-alt;
+	background: #dce3ea;
+	color: @text;
 }
 
 /* States */
-/* Medium load */
 #cpu.warning {
-	background: @cpu-warning;
-	color: @bg-alt;
+	background: @yellow;
+	color: #1f2328;
 }
 
-/* High load */
 #cpu.critical {
-	background: @cpu-critical;
-	color: @bg-alt;
+	background: @red;
+	color: #ffffff;
 }
 
-/* Animations */
+/* Network */
+#network.disconnected {
+	color: @muted;
+}
+
+/* Audio */
+#pulseaudio.muted {
+	color: @muted;
+}
+
+/* Clock */
+#clock {
+	font-weight: 600;
+	color: @text;
+}
+
+/* Animation */
 @keyframes blink {
 	to {
-		background: @text;
-		color: @text;
+		background: @red;
+		color: @bg-alt;
 	}
 }

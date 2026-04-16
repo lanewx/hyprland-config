@@ -3,7 +3,7 @@
 	"logo": {
 		"source": "arch_small", // search for logos: fastfetch --list-logos
 		"padding": { "top": 2 },
-		"color": { "1": "white", "2": "white" },
+		"color": { "1": "blue", "2": "blue" },
 		"width": 10,
 	},
 	"display": {
@@ -14,43 +14,43 @@
 		{
 			"type": "os",
 			"key": " OS",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		{
 			"type": "kernel",
 			"key": " KERN",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		{
 			"type": "uptime",
 			"key": "󱑍 UPTM",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		{
 			"type": "packages",
 			"format": "{} (pacman)",
 			"key": " PKGS",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		{
 			"type": "shell",
 			"key": " SH",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		{
 			"type": "wm",
 			"key": " WM",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		{
 			"type": "terminal",
 			"key": " TERM",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		{
 			"type": "disk",
 			"key": " DISK",
-			"keyColor": "white",
+			"keyColor": "blue",
 		},
 		"break",
 		{

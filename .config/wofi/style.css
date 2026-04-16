@@ -1,10 +1,10 @@
 window {
-	background-color: #1b1613;
+	background-color: #e9e1d6;
 }
 
 * {
 	font-family: "JetBrains Mono";
-	color: #c69a5b;
+	color: #1c2230;
 }
 
 #scroll {
@@ -12,8 +12,7 @@ window {
 }
 
 #input {
-	background-color: #1b1613;
-	color: #c69a5b;
+	background-color: #e9e1d6;
 	outline: none;
 	box-shadow: none;
 	border: 0;
@@ -36,10 +35,10 @@ window {
 }
 
 #entry:selected {
-	background-color: #d79921;
+	background-color: #f28c52;
 	outline: none;
 }
 
 #text:selected {
-	color: #1b1613;
+	color: #e9e1d6;
 }

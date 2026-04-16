@@ -11,28 +11,11 @@
 		},
 	},
 
-	"hyprland/window": {
-		"format": "󰣆  {title}",
-		"max-length": 40,
-		"separate-outputs": false,
-		"rewrite": {
-			"(.*) — Mozilla Firefox": "󰈹  Firefox",
-			"^.*~$": "  Terminal",
-			// "^.*(vim|VIM).*$": "  Vim",
-			"^.*(vim|VIM).*$": "  Neovim",
-			// "^.*(nvim|Neovim).*$": "  Neovim",
-			"(.*) ": "  Home",
-			"^.*pdf( .*|$)": "  PDF",
-			"^.*(mpv|vlc).*$": "󰕼  Media",
-		},
-	},
-
 	"network": {
 		"interval": 2,
 		"format-wifi": "  {essid}",
-		"format-ethernet": "<span foreground='#93A86A'>󰈀  Wired</span>",
-		"format-linked": "<span foreground='#93A86A'>󰈀  Connected</span>",
-		"format-disconnected": "<span foreground='#C26152'>  Disconnected</span>",
+		"format-ethernet": "<span foreground='#f28c52'>󰈀 Connected</span>",
+		"format-disconnected": "<span foreground='#ff5f57'>  Disconnected</span>",
 		"format-alt": "↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
 		"tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\n↓ {bandwidthDownBytes}\n↑ {bandwidthUpBytes}",
 		"tooltip-format-disconnected": "<span foreground='#E82424'>No network connection</span>",
@@ -82,9 +65,10 @@
 		"format-ru": "Russian (RU)",
 		"on-click": "hyprctl switchxkblayout all next",
 	},
+
 	"clock": {
 		"interval": 5,
-		"format": "{:%I:%M %p, %A, %b/%d/%y}",
+		"format": "{:%I:%M %p, %A}",
 		"format-alt": "{:%Y-%m-%d %H:%M}",
 		"tooltip": true,
 		"tooltip-format": "{:%A, %d %B %Y | %H:%M:%S}",

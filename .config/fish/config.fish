@@ -9,52 +9,61 @@ alias la="ls -lha"
 alias code="codium"
 
 # Color Theme:
-# Background / foreground
-set -g fish_color_normal E8DCC0
-set -g fish_color_command C69A5B
-set -g fish_color_keyword A87486
-set -g fish_color_quote 93A86A
-set -g fish_color_redirection 8FA3AD
-set -g fish_color_end B5655D
-set -g fish_color_error C26152
-set -g fish_color_param E8DCC0
-set -g fish_color_comment 7E7466
-set -g fish_color_selection --background=3A2F28
-set -g fish_color_search_match --background=2C231E
-set -g fish_color_operator D0A060
-set -g fish_color_escape B5655D
-set -g fish_color_autosuggestion 6B5A4F
-set -g fish_color_valid_path 93A86A --underline
+
+# Core text
+set -g fish_color_normal dcd6cd
+set -g fish_color_command f28c52       # MAIN (orange)
+set -g fish_color_keyword 2f6db3       # deep blue
+set -g fish_color_param 8fa1b3         # muted blue-gray
+
+# Strings / quotes (sunlight tone)
+set -g fish_color_quote f2c66d
+
+# Operators / symbols
+set -g fish_color_operator f28c52
+set -g fish_color_end f28c52
+set -g fish_color_escape f28c52
+
+# Redirection (soft blue highlight)
+set -g fish_color_redirection 6aa9ff
+
+# Errors (warm red)
+set -g fish_color_error d96b5f
+
+# Comments and autosuggestions
+set -g fish_color_comment 8a93a8
+set -g fish_color_autosuggestion 8a93a8
+
+# Selection and search (warm highlight, not teal)
+set -g fish_color_selection --background=ffe0c2
+set -g fish_color_search_match --background=fff0db
+
+# Valid paths (accent)
+set -g fish_color_valid_path f28c52 --underline
 
 # Pager (completion menu)
-set -g fish_pager_color_prefix C69A5B
-set -g fish_pager_color_completion E8DCC0
-set -g fish_pager_color_description A89C8A
-set -g fish_pager_color_progress 6B5A4F
+set -g fish_pager_color_prefix f28c52
+set -g fish_pager_color_completion dcd6cd
+set -g fish_pager_color_description 6f7fa6
+set -g fish_pager_color_progress 8a93a8
 
 zoxide init fish | source
-
-# Go binaries:
-# set -gx PATH $HOME/go/bin $PATH
 
 # Remove default greeting:
 set -U fish_greeting
 
-# Command color customization:
-set fish_color_command green
+# Command color (override safety)
+set fish_color_command f28c52
 
 if status is-interactive
-    # Commands to run in interactive sessions can go here
 end
 
 function fish_prompt
-    # Current working directory:
-    set_color 7E7466
+    # Current working directory (blue for structure)
+    set_color 2f6db3
     echo -n (prompt_pwd)
 
-    # Prompt symbol:
+    # Prompt symbol (accent)
+    set_color f28c52
     echo -n "  "
 end
-
-
-
